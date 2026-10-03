@@ -1,85 +1,52 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-```
-/* =====================================================
-   MENÚ MÓVIL
-===================================================== */
+    // 1. Actualizar automáticamente el año en el footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 
-const menuButton =
-    document.getElementById("menuButton");
+    // 2. Control del Menú Hamburguesa para dispositivos móviles
+    const menuButton = document.getElementById('menuButton');
+    const navigation = document.getElementById('navigation');
 
-const navigation =
-    document.getElementById("navigation");
-
-
-if (menuButton && navigation) {
-
-    menuButton.addEventListener("click", () => {
-
-        navigation.classList.toggle("active");
-
-    });
-
-
-    navigation
-        .querySelectorAll("a")
-        .forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navigation.classList.remove("active");
-
-            });
-
+    if (menuButton && navigation) {
+        menuButton.addEventListener('click', () => {
+            menuButton.classList.toggle('active');
+            navigation.classList.toggle('active');
         });
 
-}
-
-
-/* =====================================================
-   AÑO AUTOMÁTICO
-===================================================== */
-
-const year =
-    document.getElementById("year");
-
-
-if (year) {
-
-    year.textContent =
-        new Date().getFullYear();
-
-}
-
-
-/* =====================================================
-   CAMBIO DE CABECERA AL HACER SCROLL
-===================================================== */
-
-const header =
-    document.querySelector(".header");
-
-
-window.addEventListener("scroll", () => {
-
-    if (!header) {
-        return;
+        // Cerrar el menú al hacer clic en un enlace de navegación
+        const navLinks = navigation.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuButton.classList.remove('active');
+                navigation.classList.remove('active');
+            });
+        });
     }
 
+    // 3. Resaltar la sección activa en el menú al hacer scroll
+    const sections = document.querySelectorAll('section[id]');
+    
+    const highlightNavOnScroll = () => {
+        const scrollY = window.pageYOffset;
 
-    if (window.scrollY > 40) {
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 100;
+            const sectionId = current.getAttribute('id');
+            const navItem = document.querySelector(`.navigation a[href*="${sectionId}"]`);
 
-        header.style.boxShadow =
-            "0 5px 25px rgba(0,0,0,.05)";
+            if (navItem) {
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    navItem.style.color = 'var(--accent)';
+                } else {
+                    navItem.style.color = '';
+                }
+            }
+        });
+    };
 
-    } else {
-
-        header.style.boxShadow =
-            "none";
-
-    }
-
-});
-```
-
+    window.addEventListener('scroll', highlightNavOnScroll);
 });
