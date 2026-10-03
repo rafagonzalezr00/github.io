@@ -1,44 +1,85 @@
-/* =========================================================
-MENÚ MÓVIL
-========================================================= */
-
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-menuToggle.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", () => {
 
 ```
-navLinks.classList.toggle("active");
-```
+/* =====================================================
+   MENÚ MÓVIL
+===================================================== */
 
-});
+const menuButton =
+    document.getElementById("menuButton");
 
-/* =========================================================
-CERRAR MENÚ AL PULSAR UN ENLACE
-========================================================= */
+const navigation =
+    document.getElementById("navigation");
 
-document.querySelectorAll(".nav-links a").forEach(link => {
 
-```
-link.addEventListener("click", () => {
+if (menuButton && navigation) {
 
-    navLinks.classList.remove("active");
+    menuButton.addEventListener("click", () => {
 
-});
-```
+        navigation.classList.toggle("active");
 
-});
+    });
 
-/* =========================================================
-AÑO AUTOMÁTICO
-========================================================= */
 
-const yearElement = document.getElementById("year");
+    navigation
+        .querySelectorAll("a")
+        .forEach(link => {
 
-if (yearElement) {
+            link.addEventListener("click", () => {
 
-```
-yearElement.textContent = new Date().getFullYear();
-```
+                navigation.classList.remove("active");
+
+            });
+
+        });
 
 }
+
+
+/* =====================================================
+   AÑO AUTOMÁTICO
+===================================================== */
+
+const year =
+    document.getElementById("year");
+
+
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
+
+}
+
+
+/* =====================================================
+   CAMBIO DE CABECERA AL HACER SCROLL
+===================================================== */
+
+const header =
+    document.querySelector(".header");
+
+
+window.addEventListener("scroll", () => {
+
+    if (!header) {
+        return;
+    }
+
+
+    if (window.scrollY > 40) {
+
+        header.style.boxShadow =
+            "0 5px 25px rgba(0,0,0,.05)";
+
+    } else {
+
+        header.style.boxShadow =
+            "none";
+
+    }
+
+});
+```
+
+});
