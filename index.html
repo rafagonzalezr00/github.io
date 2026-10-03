@@ -1,501 +1,1354 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<meta name="description" content="Portfolio personal de Rafael González. Desarrollador de software especializado en Flutter, Java y Spring Boot.">
+<meta charset="UTF-8">
 
-<title>Rafael González | Desarrollador de Software</title>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
-<link rel="stylesheet" href="styles.css">
+<meta
+    name="description"
+    content="Portfolio personal de Rafael González, Ingeniero Informático especializado en desarrollo de software."
+>
 
+<meta
+    name="author"
+    content="Rafael González"
+>
+
+<title>Rafael González | Software Developer</title>
+
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+>
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css">
 ```
 
 </head>
 
 <body>
 
-```
-<!-- =========================
+<!-- =====================================================
      NAVEGACIÓN
-========================== -->
+===================================================== -->
 
 <header class="header">
-    <nav class="navbar container">
 
-        <a href="#inicio" class="logo">
-            RG
-        </a>
+```
+<div class="container nav-container">
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+    <a href="#inicio" class="logo">
+        RG<span>.</span>
+    </a>
 
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#formacion">Formación</a></li>
-            <li><a href="#tecnologias">Tecnologías</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+
+    <nav class="navigation" id="navigation">
+
+        <a href="#sobre-mi">Sobre mí</a>
+
+        <a href="#experiencia">Experiencia</a>
+
+        <a href="#formacion">Formación</a>
+
+        <a href="#tecnologias">Tecnologías</a>
+
+        <a href="#proyectos">Proyectos</a>
+
+        <a href="#contacto">Contacto</a>
 
     </nav>
-</header>
 
+
+    <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Abrir menú"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </button>
+
+</div>
+```
+
+</header>
 
 <main>
 
-    <!-- =========================
-         INICIO
-    ========================== -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <section id="inicio" class="hero">
+<section id="inicio" class="hero">
 
-        <div class="container hero-content">
-
-            <div class="hero-text">
-
-                <p class="eyebrow">
-                    DESARROLLADOR DE SOFTWARE
-                </p>
-
-                <h1>
-                    Hola, soy<br>
-                    <span>Rafael González.</span>
-                </h1>
-
-                <p class="hero-description">
-                    Desarrollo aplicaciones y soluciones digitales
-                    utilizando tecnologías modernas como Flutter,
-                    Java y Spring Boot.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#proyectos" class="btn btn-primary">
-                        Ver proyectos
-                    </a>
-
-                    <a href="assets/cv.pdf" class="btn btn-secondary" download>
-                        Descargar CV
-                    </a>
-
-                </div>
-
-            </div>
+```
+<div class="container hero-grid">
 
 
-            <div class="hero-photo">
+    <div class="hero-content">
 
-                <div class="photo-container">
+        <div class="hero-label">
 
-                    <img
-                        src="assets/foto.jpg"
-                        alt="Rafael González"
-                        onerror="this.style.display='none';"
-                    >
+            <span class="status-dot"></span>
 
-                    <div class="photo-placeholder">
-                        RG
-                    </div>
-
-                </div>
-
-            </div>
+            DISPONIBLE PARA NUEVOS PROYECTOS
 
         </div>
 
-    </section>
+
+        <h1>
+
+            Rafael<br>
+
+            <span>González.</span>
+
+        </h1>
 
 
-    <!-- =========================
-         SOBRE MÍ
-    ========================== -->
+        <p class="hero-subtitle">
 
-    <section id="sobre-mi" class="section">
+            Ingeniero Informático especializado en
+            <strong>desarrollo de software</strong>.
 
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span>01</span>
-
-                <h2>Sobre mí</h2>
-
-            </div>
+        </p>
 
 
-            <div class="about-grid">
+        <p class="hero-description">
 
-                <div>
+            Apasionado por la informática y en constante
+            evolución. Me interesa especialmente el desarrollo
+            de aplicaciones, la programación y las bases de datos,
+            buscando siempre convertir los conocimientos adquiridos
+            en soluciones útiles y funcionales.
 
-                    <p class="large-text">
-                        Soy desarrollador de software interesado en
-                        crear aplicaciones útiles, funcionales y
-                        fáciles de utilizar.
-                    </p>
-
-                </div>
+        </p>
 
 
-                <div class="about-text">
+        <div class="hero-actions">
 
-                    <p>
-                        Actualmente estoy desarrollando diferentes
-                        proyectos personales y académicos relacionados
-                        con el desarrollo de aplicaciones, bases de datos
-                        y servicios web.
-                    </p>
+            <a
+                href="#proyectos"
+                class="button button-primary"
+            >
+                Ver proyectos
+                <span>↗</span>
+            </a>
 
-                    <p>
-                        Me interesa especialmente el desarrollo de
-                        aplicaciones multiplataforma, el backend y la
-                        creación de soluciones completas que conecten
-                        aplicaciones, APIs y bases de datos.
-                    </p>
 
-                </div>
-
-            </div>
+            <a
+                href="assets/CV_RafaelGonzalez.pdf"
+                class="button button-outline"
+                target="_blank"
+            >
+                Ver CV
+            </a>
 
         </div>
 
-    </section>
+
+        <div class="hero-social">
+
+            <a
+                href="https://github.com/rafagonzalezr00"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
 
 
-    <!-- =========================
-         FORMACIÓN
-    ========================== -->
-
-    <section id="formacion" class="section section-light">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span>02</span>
-
-                <h2>Formación</h2>
-
-            </div>
+            <span>·</span>
 
 
-            <div class="timeline">
-
-                <article class="timeline-item">
-
-                    <div class="timeline-date">
-                        2026 — Actualidad
-                    </div>
-
-                    <div class="timeline-content">
-
-                        <h3>Máster</h3>
-
-                        <p>
-                            Máster actualmente en curso.
-                        </p>
-
-                    </div>
-
-                </article>
+            <a
+                href="https://www.instagram.com/rafaelgr00"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
 
 
-                <article class="timeline-item">
+            <span>·</span>
 
-                    <div class="timeline-date">
-                        2022 — 2026
-                    </div>
 
-                    <div class="timeline-content">
-
-                        <h3>Grado universitario</h3>
-
-                        <p>
-                            Formación universitaria relacionada con
-                            el ámbito tecnológico y el desarrollo
-                            de software.
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
+            <a href="mailto:rafaelgonzalezrodriguez0@gmail.com">
+                Email
+            </a>
 
         </div>
 
-    </section>
+    </div>
 
 
-    <!-- =========================
-         TECNOLOGÍAS
-    ========================== -->
 
-    <section id="tecnologias" class="section">
+    <div class="hero-image-wrapper">
 
-        <div class="container">
+        <div class="hero-image-frame">
 
-            <div class="section-heading">
-
-                <span>03</span>
-
-                <h2>Tecnologías</h2>
-
-            </div>
-
-
-            <div class="skills-grid">
-
-                <div class="skill">
-                    <strong>Flutter</strong>
-                    <span>Aplicaciones multiplataforma</span>
-                </div>
-
-                <div class="skill">
-                    <strong>Dart</strong>
-                    <span>Desarrollo de aplicaciones</span>
-                </div>
-
-                <div class="skill">
-                    <strong>Java</strong>
-                    <span>Desarrollo backend</span>
-                </div>
-
-                <div class="skill">
-                    <strong>Spring Boot</strong>
-                    <span>APIs y servicios REST</span>
-                </div>
-
-                <div class="skill">
-                    <strong>SQL</strong>
-                    <span>Bases de datos</span>
-                </div>
-
-                <div class="skill">
-                    <strong>Git</strong>
-                    <span>Control de versiones</span>
-                </div>
-
-                <div class="skill">
-                    <strong>GitHub</strong>
-                    <span>Repositorios y proyectos</span>
-                </div>
-
-                <div class="skill">
-                    <strong>HTML / CSS / JS</strong>
-                    <span>Desarrollo web</span>
-                </div>
-
-            </div>
+            <img
+                src="assets/foto.png"
+                alt="Rafael González"
+                class="hero-image"
+            >
 
         </div>
 
-    </section>
 
+        <div class="hero-image-info">
 
-    <!-- =========================
-         PROYECTOS
-    ========================== -->
+            <span>01</span>
 
-    <section id="proyectos" class="section section-light">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <span>04</span>
-
-                <h2>Proyectos</h2>
-
-            </div>
-
-
-            <div class="projects-grid">
-
-
-                <!-- PROYECTO 1 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        01
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Gestión Agrícola</h3>
-
-                        <p>
-                            Aplicación para la gestión de agricultores,
-                            campañas, contratos, conduces, relaciones
-                            complementarias y procesos relacionados
-                            con la gestión agrícola.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>Flutter</span>
-                            <span>Dart</span>
-                            <span>SQLite</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROYECTO 2 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Aplicación Hermandad</h3>
-
-                        <p>
-                            Aplicación desarrollada como proyecto
-                            académico utilizando Flutter y un backend
-                            basado en Java y Spring Boot.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>Flutter</span>
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>MySQL</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PROYECTO 3 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div class="project-content">
-
-                        <h3>Portfolio personal</h3>
-
-                        <p>
-                            Página web personal desarrollada para
-                            presentar mi perfil profesional, formación,
-                            conocimientos y proyectos.
-                        </p>
-
-                        <div class="project-tags">
-
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                            <span>GitHub Pages</span>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
+            <p>
+                Software<br>
+                Developer
+            </p>
 
         </div>
 
-    </section>
+    </div>
+
+</div>
 
 
-    <!-- =========================
-         CONTACTO
-    ========================== -->
+<div class="hero-scroll">
 
-    <section id="contacto" class="section contact-section">
+    <span></span>
 
-        <div class="container contact-content">
+    SCROLL
 
-            <div class="section-heading">
+</div>
+```
 
-                <span>05</span>
+</section>
 
-                <h2>Contacto</h2>
+<!-- =====================================================
+     SOBRE MÍ
+===================================================== -->
 
-            </div>
+<section id="sobre-mi" class="section">
+
+```
+<div class="container">
 
 
-            <p class="contact-intro">
-                ¿Quieres ponerte en contacto conmigo?
+    <div class="section-top">
+
+        <span class="section-number">
+            01
+        </span>
+
+        <span class="section-label">
+            SOBRE MÍ
+        </span>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+        <div>
+
+            <h2 class="section-title">
+
+                Tecnología,<br>
+
+                <span>curiosidad y evolución.</span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="about-highlight">
+
+                Me considero una persona apasionada por la
+                informática, con interés constante por aprender
+                nuevas tecnologías y mejorar mis conocimientos.
+
             </p>
 
 
-            <div class="contact-links">
+            <p>
 
-                <a href="mailto:TU_EMAIL_AQUI">
-                    <span>Email</span>
-                    <strong>TU_EMAIL_AQUI</strong>
-                </a>
+                A lo largo de mi formación y experiencia he
+                trabajado con diferentes lenguajes de programación,
+                bases de datos, sistemas operativos y herramientas
+                de desarrollo.
 
-                <a href="https://github.com/rafagonzalezr00" target="_blank" rel="noopener noreferrer">
-                    <span>GitHub</span>
-                    <strong>rafagonzalezr00</strong>
-                </a>
+            </p>
 
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                    <span>LinkedIn</span>
-                    <strong>Mi perfil</strong>
-                </a>
 
-            </div>
+            <p>
+
+                Mi objetivo es seguir creciendo profesionalmente
+                dentro del desarrollo de software y participar en
+                proyectos donde pueda aplicar mis conocimientos y
+                continuar aprendiendo.
+
+            </p>
 
         </div>
 
-    </section>
-
-</main>
+    </div>
 
 
-<!-- =========================
-     FOOTER
-========================== -->
+    <div class="about-facts">
 
-<footer class="footer">
 
-    <div class="container footer-content">
+        <div class="fact">
+
+            <strong>Software</strong>
+
+            <span>
+                Especialización
+            </span>
+
+        </div>
+
+
+        <div class="fact">
+
+            <strong>Java</strong>
+
+            <span>
+                Backend
+            </span>
+
+        </div>
+
+
+        <div class="fact">
+
+            <strong>Flutter</strong>
+
+            <span>
+                Multiplataforma
+            </span>
+
+        </div>
+
+
+        <div class="fact">
+
+            <strong>SQL</strong>
+
+            <span>
+                Bases de datos
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     EXPERIENCIA
+===================================================== -->
+
+<section id="experiencia" class="section section-dark">
+
+```
+<div class="container">
+
+
+    <div class="section-top section-top-light">
+
+        <span class="section-number">
+            02
+        </span>
+
+        <span class="section-label">
+            EXPERIENCIA
+        </span>
+
+    </div>
+
+
+    <h2 class="section-title section-title-light">
+
+        Experiencia<br>
+
+        <span>profesional.</span>
+
+    </h2>
+
+
+    <div class="experience-list">
+
+
+        <article class="experience-item">
+
+            <div class="experience-date">
+
+                MAR 2020 — JUN 2020
+
+            </div>
+
+
+            <div class="experience-main">
+
+                <div>
+
+                    <h3>
+                        Programador Java SE
+                    </h3>
+
+                    <p class="experience-company">
+                        Fujitsu · Sevilla
+                    </p>
+
+                </div>
+
+
+                <p class="experience-description">
+
+                    Contrato de prácticas correspondiente al
+                    Ciclo Formativo de Grado Superior en ASIR.
+                    Participación en el diseño y desarrollo de
+                    aplicaciones utilizando Java SE.
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <article class="experience-item">
+
+            <div class="experience-date">
+
+                ENE 2022 — OCT 2025
+
+            </div>
+
+
+            <div class="experience-main">
+
+                <div>
+
+                    <h3>
+                        Gestor de Redes Sociales
+                    </h3>
+
+                    <p class="experience-company">
+                        Hermandad del Cautivo de Almonte
+                    </p>
+
+                </div>
+
+
+                <p class="experience-description">
+
+                    Mantenimiento de páginas web y redes sociales,
+                    además de creación de banners y contenido
+                    gráfico para comunicación digital.
+
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     FORMACIÓN
+===================================================== -->
+
+<section id="formacion" class="section">
+
+```
+<div class="container">
+
+
+    <div class="section-top">
+
+        <span class="section-number">
+            03
+        </span>
+
+        <span class="section-label">
+            FORMACIÓN
+        </span>
+
+    </div>
+
+
+    <h2 class="section-title">
+
+        Formación<br>
+
+        <span>académica.</span>
+
+    </h2>
+
+
+    <div class="education-list">
+
+
+        <article class="education-item">
+
+            <div class="education-year">
+                ACTUALIDAD
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Máster
+                </h3>
+
+                <p>
+                    Actualmente cursando.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="education-item">
+
+            <div class="education-year">
+                UNIVERSIDAD
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Grado en Ingeniería Informática
+                </h3>
+
+                <p>
+                    Especialización en Software.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="education-item">
+
+            <div class="education-year">
+                FORMACIÓN PROFESIONAL
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Técnico Superior en Administración
+                    de Sistemas Informáticos en Red
+                </h3>
+
+                <p>
+                    Formación especializada en sistemas,
+                    redes, bases de datos y desarrollo.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     TECNOLOGÍAS
+===================================================== -->
+
+<section id="tecnologias" class="section section-soft">
+
+```
+<div class="container">
+
+
+    <div class="section-top">
+
+        <span class="section-number">
+            04
+        </span>
+
+        <span class="section-label">
+            TECNOLOGÍAS
+        </span>
+
+    </div>
+
+
+    <div class="technology-heading">
+
+        <h2 class="section-title">
+
+            Herramientas<br>
+
+            <span>que utilizo.</span>
+
+        </h2>
+
 
         <p>
-            © <span id="year"></span> Rafael González
-        </p>
 
-        <p>
-            Ingeniero Informático especializado en Software
+            Un conjunto de tecnologías adquiridas durante
+            mi formación, experiencia profesional y proyectos
+            personales.
+
         </p>
 
     </div>
 
-</footer>
+
+    <div class="technology-grid">
 
 
-<script src="script.js"></script>
+        <div class="technology-card">
+
+            <span class="technology-number">
+                01
+            </span>
+
+            <h3>
+                Java
+            </h3>
+
+            <p>
+                Java SE · POO · Spring Boot
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                02
+            </span>
+
+            <h3>
+                Flutter
+            </h3>
+
+            <p>
+                Dart · Android · Web · Desktop
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                03
+            </span>
+
+            <h3>
+                Bases de datos
+            </h3>
+
+            <p>
+                MySQL · Oracle · MariaDB · SQLite
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                04
+            </span>
+
+            <h3>
+                Web
+            </h3>
+
+            <p>
+                HTML5 · CSS · PHP · JavaScript
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                05
+            </span>
+
+            <h3>
+                Programación
+            </h3>
+
+            <p>
+                Python · C · C# · C++ · PHP
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                06
+            </span>
+
+            <h3>
+                Sistemas
+            </h3>
+
+            <p>
+                Linux · Linux Server · Debian · Raspberry Pi
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                07
+            </span>
+
+            <h3>
+                Herramientas
+            </h3>
+
+            <p>
+                Git · GitHub · SSH
+            </p>
+
+        </div>
+
+
+        <div class="technology-card">
+
+            <span class="technology-number">
+                08
+            </span>
+
+            <h3>
+                Multimedia
+            </h3>
+
+            <p>
+                OBS Studio · Lightroom · Adobe Premiere
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 ```
 
+</section>
+
+<!-- =====================================================
+     PROYECTOS
+===================================================== -->
+
+<section id="proyectos" class="section">
+
+```
+<div class="container">
+
+
+    <div class="section-top">
+
+        <span class="section-number">
+            05
+        </span>
+
+        <span class="section-label">
+            PROYECTOS
+        </span>
+
+    </div>
+
+
+    <div class="projects-heading">
+
+        <h2 class="section-title">
+
+            Cosas que<br>
+
+            <span>he construido.</span>
+
+        </h2>
+
+
+        <p>
+
+            Una selección de proyectos académicos y personales
+            en los que he podido aplicar diferentes tecnologías.
+
+        </p>
+
+    </div>
+
+
+    <div class="projects-list">
+
+
+        <!-- GESTIÓN AGRÍCOLA -->
+
+        <article class="project">
+
+
+            <div class="project-top">
+
+                <span>
+                    01 / APP DE GESTIÓN
+                </span>
+
+                <span>
+                    2026
+                </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+                <div>
+
+                    <h3>
+                        Gestión Agrícola
+                    </h3>
+
+                    <p>
+
+                        Aplicación para la gestión integral de
+                        procesos agrícolas, agricultores,
+                        campañas, contratos, conduces,
+                        relaciones complementarias y
+                        liquidaciones.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-technologies">
+
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>SQLite</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-footer">
+
+                <span>
+                    PROYECTO PERSONAL
+                </span>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- HERMANDAD -->
+
+        <article class="project">
+
+
+            <div class="project-top">
+
+                <span>
+                    02 / APLICACIÓN
+                </span>
+
+                <span>
+                    TFG
+                </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+                <div>
+
+                    <h3>
+                        Gestión de Hermandad
+                    </h3>
+
+                    <p>
+
+                        Aplicación cliente-servidor multiplataforma
+                        desarrollada para la gestión de una
+                        Hermandad de Penitencia.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-technologies">
+
+                    <span>Flutter</span>
+                    <span>Spring Boot</span>
+                    <span>Java</span>
+                    <span>MySQL</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-footer">
+
+                <span>
+                    PROYECTO ACADÉMICO
+                </span>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- FEGA -->
+
+        <article class="project">
+
+
+            <div class="project-top">
+
+                <span>
+                    03 / HERRAMIENTA
+                </span>
+
+                <span>
+                    PERSONAL
+                </span>
+
+            </div>
+
+
+            <div class="project-body">
+
+                <div>
+
+                    <h3>
+                        AutoFEGA
+                    </h3>
+
+                    <p>
+
+                        Herramienta orientada a facilitar la gestión
+                        de información de agricultores y la consulta
+                        de datos relacionados con identificadores
+                        agrarios.
+
+                    </p>
+
+                </div>
+
+
+                <div class="project-technologies">
+
+                    <span>Flutter</span>
+                    <span>Excel</span>
+                    <span>APIs</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-footer">
+
+                <span>
+                    PROYECTO PERSONAL
+                </span>
+
+                <span class="project-arrow">
+                    ↗
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     CURSOS + IDIOMAS
+===================================================== -->
+
+<section class="section section-soft">
+
+```
+<div class="container two-column-section">
+
+
+    <div>
+
+        <div class="section-top">
+
+            <span class="section-number">
+                06
+            </span>
+
+            <span class="section-label">
+                FORMACIÓN COMPLEMENTARIA
+            </span>
+
+        </div>
+
+
+        <h2 class="section-title small-title">
+
+            Cursos
+
+        </h2>
+
+
+        <div class="courses-list">
+
+            <div>
+                <strong>Java SE</strong>
+                <span>Cámara de Comercio de Huelva · 150 h</span>
+            </div>
+
+            <div>
+                <strong>Ansible</strong>
+                <span>OpenWebinars · 28 h</span>
+            </div>
+
+            <div>
+                <strong>C# para principiantes</strong>
+                <span>OpenWebinars · 10 h</span>
+            </div>
+
+            <div>
+                <strong>HTML5 y CSS</strong>
+                <span>OpenWebinars · 10 h</span>
+            </div>
+
+            <div>
+                <strong>IPTables</strong>
+                <span>OpenWebinars · 10 h</span>
+            </div>
+
+            <div>
+                <strong>PHP Básico</strong>
+                <span>OpenWebinars · 6 h</span>
+            </div>
+
+            <div>
+                <strong>Linux desde cero</strong>
+                <span>OpenWebinars · 15 h</span>
+            </div>
+
+            <div>
+                <strong>SSH</strong>
+                <span>OpenWebinars · 6 h</span>
+            </div>
+
+            <div>
+                <strong>Ofimática en la Nube</strong>
+                <span>Business Jump · 50 h</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div>
+
+        <div class="section-top">
+
+            <span class="section-number">
+                07
+            </span>
+
+            <span class="section-label">
+                IDIOMAS
+            </span>
+
+        </div>
+
+
+        <h2 class="section-title small-title">
+
+            Idiomas
+
+        </h2>
+
+
+        <div class="languages">
+
+            <div class="language">
+
+                <strong>
+                    Castellano
+                </strong>
+
+                <span>
+                    Nativo
+                </span>
+
+            </div>
+
+
+            <div class="language">
+
+                <strong>
+                    Inglés
+                </strong>
+
+                <span>
+                    B1 Certificado · Capman
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="additional-info">
+
+            <h3>
+                Más información
+            </h3>
+
+            <ul>
+
+                <li>
+                    Carné de conducir
+                </li>
+
+                <li>
+                    Vehículo propio
+                </li>
+
+                <li>
+                    Disponibilidad total
+                </li>
+
+                <li>
+                    Fotografía, vídeo y edición multimedia
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
+<section id="contacto" class="contact-section">
+
+```
+<div class="container">
+
+
+    <div class="contact-inner">
+
+
+        <span class="contact-label">
+            08 / CONTACTO
+        </span>
+
+
+        <h2>
+
+            ¿Hablamos?
+
+        </h2>
+
+
+        <p>
+
+            Si quieres conocer más sobre mi trabajo,
+            alguno de mis proyectos o simplemente
+            ponerte en contacto conmigo, puedes hacerlo
+            a través de cualquiera de estos medios.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a
+                href="mailto:rafaelgonzalezrodriguez0@gmail.com"
+                class="contact-button"
+            >
+
+                <span>Email</span>
+
+                <strong>
+                    rafaelgonzalezrodriguez0@gmail.com
+                </strong>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="https://github.com/rafagonzalezr00"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button"
+            >
+
+                <span>GitHub</span>
+
+                <strong>
+                    github.com/rafagonzalezr00
+                </strong>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+            </a>
+
+
+            <a
+                href="tel:+34674139251"
+                class="contact-button"
+            >
+
+                <span>Teléfono</span>
+
+                <strong>
+                    +34 674 13 92 51
+                </strong>
+
+                <span class="arrow">
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+
+        <a
+            href="assets/CV_RafaelGonzalez.pdf"
+            target="_blank"
+            class="download-cv"
+        >
+            Descargar CV completo →
+        </a>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+```
+<div class="container footer-content">
+
+    <div>
+
+        <strong>
+            RAFAEL GONZÁLEZ
+        </strong>
+
+        <span>
+            · Software Developer
+        </span>
+
+    </div>
+
+
+    <div>
+
+        © <span id="year"></span>
+        Rafael González
+
+    </div>
+
+</div>
+```
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
