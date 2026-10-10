@@ -2021,3 +2021,181 @@ textarea:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* =====================================================
+   TECNOLOGÍAS — TARJETAS Y LOGOTIPOS UNIFORMES
+===================================================== */
+
+.technology-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.technology-card {
+    background: #ffffff;
+    border: 1px solid rgba(40, 54, 24, 0.08);
+    border-radius: 18px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    box-shadow: 0 5px 20px rgba(31, 42, 27, 0.035);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.technology-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(31, 42, 27, 0.09);
+    border-color: rgba(89, 104, 45, 0.22);
+}
+
+/* Espacio uniforme para todos los logotipos */
+.technology-logo {
+    width: 100%;
+    height: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+/* Todas las imágenes tienen el mismo límite de tamaño */
+.technology-logo img {
+    display: block;
+    width: 76px;
+    height: 76px;
+    flex: 0 0 76px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+}
+
+/* Logotipos dobles */
+.technology-logo-dual {
+    gap: 18px;
+}
+
+.technology-logo-dual img {
+    width: 68px;
+    height: 68px;
+    flex-basis: 68px;
+}
+
+/* Logotipos triples */
+.technology-logo-triple {
+    gap: 12px;
+}
+
+.technology-logo-triple img {
+    width: 56px;
+    height: 56px;
+    flex-basis: 56px;
+}
+
+/* Número de cada tecnología */
+.technology-number {
+    display: block;
+    margin-bottom: 12px;
+    color: #7a8661;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+/* Título */
+.technology-card h3 {
+    margin: 0 0 12px;
+    color: #283618;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Tecnologías y herramientas */
+.technology-stack {
+    margin: 0 0 16px;
+    color: #59682d;
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.7;
+}
+
+/* Descripción */
+.technology-use {
+    margin: 0;
+    color: #62685e;
+    font-size: 0.92rem;
+    line-height: 1.75;
+}
+
+/* Adaptación a tablet */
+@media (max-width: 1000px) {
+    .technology-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .technology-card {
+        padding: 24px;
+    }
+}
+
+/* Adaptación a móvil */
+@media (max-width: 600px) {
+    .technology-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .technology-card {
+        padding: 24px;
+        border-radius: 16px;
+    }
+
+    .technology-logo {
+        height: 88px;
+        margin-bottom: 18px;
+    }
+
+    .technology-logo img {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .technology-logo-dual img {
+        width: 62px;
+        height: 62px;
+        flex-basis: 62px;
+    }
+
+    .technology-logo-triple img {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+    }
+
+    .technology-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Accesibilidad: reducir animaciones si se solicita */
+@media (prefers-reduced-motion: reduce) {
+    .technology-card {
+        transition: none;
+    }
+
+    .technology-card:hover {
+        transform: none;
+    }
+}
